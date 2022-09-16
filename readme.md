@@ -11,7 +11,7 @@ $ forge build
 
 ## Usage
 
-### Testing with the foundry
+### Testing with the foundry environment
 
 1. Write your test in `test/Solve.s.sol`.
 2. Test it (see below)
