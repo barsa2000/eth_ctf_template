@@ -6,6 +6,8 @@ After installing foundry[^1] run:
 
 ```
 $ forge init --template https://github.com/barsa2000/eth_ctf_template "<name_of_the_project>"
+$ cd <name_of_the_project>
+$ git submodule update --init --recursive
 $ forge build
 ```
 
@@ -42,10 +44,10 @@ $ anvil
 Then deploy your challenge with:
 
 ```
-$ cast create <challenge_src_file>:<challenge_contract> --rpc-url <RPC_URL>
+$ forge create <challenge_src_file>:<challenge_contract> --rpc-url <RPC_URL> --private-key <deployer_private_key>
 ```
 
-*example: `cast create src/Setup.sol:Setup --rpc-url 127.0.0.1:8545`*
+*example: `forge create src/Setup.sol:Setup --rpc-url http://127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`*
 
 Then run your script with:
 
